@@ -1,0 +1,54 @@
+@import "reset.css";
+
+body {
+  color: white;
+  font-family: "Duru Sans", sans-serif;
+}
+
+#header-banner {
+  background: #550000;
+  border-bottom: 2px solid #0D4D4D;
+  height: 3em;
+}
+
+#links {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5em;
+}
+
+.link__header {
+  text-transform: uppercase;
+  padding: 1em;
+  margin: 0 1em;
+  box-sizing: border-box;
+}
+
+.link__header:hover {
+  background: #226666;
+  border-radius: 5px;
+  border: 2px solid  #0D4D4D;
+}
+
+#header-title {
+  padding: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#content {
+  background-color: #00333399;
+  text-shadow: 2px 2px 2px black;
+}
+
+#excerpt {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 5em;
+  width: 40%;
+  font-size: 1.5em;
+  line-height: 2;
+  font-style: italic;
+}

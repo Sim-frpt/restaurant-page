@@ -1,1 +1,4 @@
-console.log( "testttt" );
+import loadPage from "./page-load";
+
+loadPage();
+
