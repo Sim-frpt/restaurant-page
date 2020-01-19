@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_load__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-load */ \"./src/page-load.js\");\n\n\nObject(_page_load__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_load__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-load */ \"./src/page-load.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\nObject(_page_load__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\nconst navigationHeader = document.getElementById( 'header-banner' );\n\n\nconst updatePageContent = event => {\n  console.log( event.target.textContent );\n};\n\nnavigationHeader.addEventListener( 'click', updatePageContent );\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/*! exports provided: addMenu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"addMenu\", function() { return addMenu; });\nconst menuContents = [\n  {\n    name: \"Margherita\",\n    ingredients: \"tomato, mozzarela, oregano\",\n    price: 10,\n  },\n  {\n    name: \"Napolitana\",\n    ingredients: \"tomato, mozzarela, oregano, mushrooms\",\n    price: 12,\n  },\n  {\n    name: \"Capriciosa\",\n    ingredients: \"tomato, mozzarela, oregano, mushrooms, ham\",\n    price: 12,\n  },\n  {\n    name: \"Diavola\",\n    ingredients: \"tomato, mozzarela, pepperoni, oregano, mushrooms\",\n    price: 12,\n  },\n  {\n    name: \"Del Capo\",\n    ingredients: \"tomato, mozzarela, oregano, mushrooms, Parma\",\n    price: 14,\n  },\n  {\n    name: \"Quattro Fromaggio\",\n    ingredients: \"tomato, mozzarela, oregano, pargimiano, gorgonzola, magor\",\n    price: 14,\n  },\n];\n\nfunction addMenu() {\n  const menuDiv  = document.createElement( 'div' );\n  const menuList = document.createElement( 'ul' );\n\n  menuDiv.setAttribute( 'id', 'menu-content' );\n  menuList.setAttribute( 'id', 'menu-list' );\n\n  menuContents.forEach( pizza => {\n    const menuListElement = document.createElement( 'li' );\n    const nameSpan        = document.createElement( 'span' );\n    const ingredientsSpan = document.createElement( 'span' );\n    const priceSpan       = document.createElement( 'span' );\n\n    menuListElement.classList.add( 'menu-list-item' );\n    nameSpan.classList.add( 'name-span' );\n    ingredientsSpan.classList.add( 'ingredients-span' );\n    priceSpan.classList.add( 'price-span' );\n\n    nameSpan.textContent = pizza.name;\n    ingredientsSpan.textContent = pizza.ingredients;\n    priceSpan.textContent = pizza.price;\n\n    menuListElement.append( nameSpan, ingredientsSpan, priceSpan );\n    menuList.append( menuListElement );\n  });\n\n    menuDiv.append( menuList );\n    document.body.append( menuDiv );\n}\n\n\n\n\n//# sourceURL=webpack:///./src/menu.js?");
 
 /***/ }),
 
