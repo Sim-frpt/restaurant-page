@@ -32,33 +32,41 @@ const menuContents = [
 ];
 
 function addMenu() {
-  const menuDiv  = document.createElement( 'div' );
-  const menuList = document.createElement( 'ul' );
+  const contentDiv = document.getElementById( 'content' );
+
+  const menuDiv      = document.createElement( 'div' );
+  const menuHeadline = document.createElement( 'h1' );
+  const menuList     = document.createElement( 'ul' );
 
   menuDiv.setAttribute( 'id', 'menu-content' );
+  menuHeadline.setAttribute( 'id', 'menu-headline' );
   menuList.setAttribute( 'id', 'menu-list' );
+
+  menuHeadline.innerHTML = "Menu";
 
   menuContents.forEach( pizza => {
     const menuListElement = document.createElement( 'li' );
-    const nameSpan        = document.createElement( 'span' );
+    const name            = document.createElement( 'h2' );
+    const menuDetails     = document.createElement( 'div' );
     const ingredientsSpan = document.createElement( 'span' );
     const priceSpan       = document.createElement( 'span' );
 
     menuListElement.classList.add( 'menu-list-item' );
-    nameSpan.classList.add( 'name-span' );
-    ingredientsSpan.classList.add( 'ingredients-span' );
-    priceSpan.classList.add( 'price-span' );
+    name.classList.add( 'item-name' );
+    menuDetails.classList.add( 'item-details' );
+    ingredientsSpan.classList.add( 'item-ingredients' );
+    priceSpan.classList.add( 'item-price' );
 
-    nameSpan.textContent = pizza.name;
+    name.textContent = pizza.name;
     ingredientsSpan.textContent = pizza.ingredients;
     priceSpan.textContent = pizza.price;
 
-    menuListElement.append( nameSpan, ingredientsSpan, priceSpan );
+    menuDetails.append( ingredientsSpan, priceSpan );
+    menuListElement.append( name, menuDetails );
     menuList.append( menuListElement );
   });
-
-    menuDiv.append( menuList );
-    document.body.append( menuDiv );
+    menuDiv.append( menuHeadline, menuList );
+    contentDiv.append( menuDiv );
 }
 
 export { addMenu };
