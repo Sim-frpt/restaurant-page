@@ -1,0 +1,109 @@
+@import "reset.css";
+
+body {
+  color: white;
+  font-family: "Duru Sans", sans-serif;
+}
+
+#header-banner {
+  background: #550000;
+  border-bottom: 2px solid #0D4D4D;
+  height: 3em;
+}
+
+#links {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5em;
+}
+
+.link__header {
+  text-transform: uppercase;
+  padding: 1em 2em;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #FFD1AA;
+}
+
+.link__header:hover {
+  background: #226666;
+  border-radius: 5px;
+  border: 2px solid  #0D4D4D;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding: 2em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#content {
+  background-color: #00333399;
+  text-shadow: 2px 2px 2px black;
+}
+
+#excerpt {
+  text-align: center;
+  margin:  2em auto auto;
+  padding-bottom: 5em;
+  width: 40%;
+  font-size: 1.5em;
+  line-height: 2;
+  font-style: italic;
+}
+
+#menu-list {
+  text-align: center;
+  padding: 2em;
+  padding-bottom: 5em;
+}
+
+.item-name {
+  font-size: 1.5em;
+  padding: 1em;
+  color: #FFD1AA;
+  flex-basis: 100%;
+}
+
+.item-details {
+  display: flex;
+  margin: auto 25%;
+}
+
+.item-ingredients {
+  flex-grow: 2;
+  text-align: left;
+  padding-left: 1em;
+  font-style: italic;
+}
+
+.item-price {
+  flex-grow: 1;
+  text-align: right
+}
+
+.item-price:after {
+  content: '€';
+  padding-left: 5px;
+}
+
+#contact-address {
+  margin: auto 25%;
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+#google-map {
+  margin: auto auto 5em;
+  padding: 5em;
+  display: block;
+}
+
+.link__selected {
+  background: #801515;
+  border: 1px solid #FFD1AA;
+  border-radius: 2px;
+}
