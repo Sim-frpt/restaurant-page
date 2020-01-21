@@ -13,7 +13,7 @@ function addHomePage() {
   }
 
   const addImage = () => {
-    const imageSource = "../src/assets/images/pizza restaurant.jpeg";
+    const imageSource = "assets/images/pizza restaurant.jpeg";
     document.body.style.backgroundImage = `url( "${imageSource}" )`;
   }
 
